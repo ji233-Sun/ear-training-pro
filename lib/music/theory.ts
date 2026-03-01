@@ -46,15 +46,14 @@ export const CHORD_DIFFICULTY = {
 
 // 音阶类型
 export const SCALE_TYPES = {
-  major: { name: '自然大调', intervals: [0, 2, 4, 5, 7, 9, 11, 12] },
-  naturalMinor: { name: '自然小调', intervals: [0, 2, 3, 5, 7, 8, 10, 12] },
+  major: { name: '自然大调 (Ionian)', intervals: [0, 2, 4, 5, 7, 9, 11, 12] },
+  naturalMinor: { name: '自然小调 (Aeolian)', intervals: [0, 2, 3, 5, 7, 8, 10, 12] },
   harmonicMinor: { name: '和声小调', intervals: [0, 2, 3, 5, 7, 8, 11, 12] },
   melodicMinor: { name: '旋律小调', intervals: [0, 2, 3, 5, 7, 9, 11, 12] },
   dorian: { name: 'Dorian 调式', intervals: [0, 2, 3, 5, 7, 9, 10, 12] },
   phrygian: { name: 'Phrygian 调式', intervals: [0, 1, 3, 5, 7, 8, 10, 12] },
   lydian: { name: 'Lydian 调式', intervals: [0, 2, 4, 6, 7, 9, 11, 12] },
   mixolydian: { name: 'Mixolydian 调式', intervals: [0, 2, 4, 5, 7, 9, 10, 12] },
-  aeolian: { name: 'Aeolian 调式', intervals: [0, 2, 3, 5, 7, 8, 10, 12] },
   locrian: { name: 'Locrian 调式', intervals: [0, 1, 3, 5, 6, 8, 10, 12] },
   pentatonicMajor: { name: '大调五声音阶', intervals: [0, 2, 4, 7, 9, 12] },
   pentatonicMinor: { name: '小调五声音阶', intervals: [0, 3, 5, 7, 10, 12] },
