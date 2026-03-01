@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ear Training Pro
+
+A comprehensive, feature-rich solfege and ear training web application built with Next.js, Tone.js, and VexFlow.
+
+## Features
+
+- **Interval Recognition** - Identify melodic and harmonic intervals (ascending/descending) with 3 difficulty levels
+- **Chord Recognition** - Identify triads (major, minor, augmented, diminished) and seventh chords with inversion support
+- **Scale & Mode Recognition** - Identify major/minor scales, church modes, pentatonic, and blues scales
+- **Rhythm Training** - Listen and identify rhythm patterns with visual playback indicator
+- **Melodic Dictation** - Transcribe melodies using a virtual piano keyboard with staff notation display
+- **Chord Progression** - Identify common chord progressions (I-IV-V-I, ii-V-I, etc.)
+- **Pitch Training** - Absolute pitch identification and pitch comparison exercises
+- **Sight-Singing Practice** - Read and sing from generated sheet music, then verify with playback
+
+## General Features
+
+- Dashboard with progress overview and statistics for all modules
+- Practice stats: accuracy, streaks, daily history
+- Multiple instrument timbres (Piano, Synth, Organ)
+- Keyboard shortcuts (Space to replay, number keys to select answers)
+- Local storage persistence for all settings and progress
+- Responsive layout for desktop and tablet
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [TypeScript 5](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Tone.js](https://tonejs.github.io/) - Audio synthesis
+- [VexFlow](https://www.vexflow.com/) - Staff notation rendering
+- [Lucide React](https://lucide.dev/) - Icons
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/              # Next.js App Router pages (dashboard + 8 training modules)
+components/
+  layout/         # Sidebar, Header
+  music/          # StaffRenderer, PianoKeyboard, RhythmDisplay
+  training/       # OptionButton, ResultFeedback, DifficultySelector, etc.
+  ui/             # Button, Card, Modal
+hooks/            # useAudioEngine, useTrainingSession, useStats
+lib/
+  audio/          # Tone.js engine, instruments, player
+  music/          # Music theory, intervals, chords, scales, rhythm, melody, progression
+  constants.ts    # Global constants and module config
+  store.ts        # localStorage persistence
+```
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
